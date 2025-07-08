@@ -1,0 +1,590 @@
+<!DOCTYPE HTML>
+
+ <html>
+
+    <head>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <meta charset="utf-8">
+
+        <!-- Description, Keywords and Author -->
+
+        <meta name="description" content="">
+
+        <meta name="author" content="">
+
+        
+
+        <title>Made by GT</title>
+
+		<link rel="shortcut icon" href="images/Logo - GT.ico" type="image/x-icon">
+
+
+
+        <!-- style -->
+
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <!-- style -->
+
+        <!-- bootstrap -->
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+        <!-- responsive -->
+
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+        <!-- font-awesome -->
+
+        <link href="css/fonts.css" rel="stylesheet" type="text/css">
+
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- font-awesome -->
+
+        <link href="css/effects/set2.css" rel="stylesheet" type="text/css">
+
+        <link href="css/effects/normalize.css" rel="stylesheet" type="text/css">
+
+        <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
+        <script>
+            function initComparisons() {
+            var x, i;
+            /*find all elements with an "overlay" class:*/
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                /*once for each "overlay" element:
+                pass the "overlay" element as a parameter when executing the compareImages function:*/
+                compareImages(x[i]);
+            }
+            function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                /*get the width and height of the img element*/
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /*set the width of the img element to 50%:*/
+                img.style.width = (w / 1.25) + "px";
+                /*create slider:*/
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /*insert slider*/
+                img.parentElement.insertBefore(slider, img);
+                /*position the slider in the middle:*/
+                slider.style.top = (h / 1.25) - (slider.offsetHeight / 1.25) + "px";
+                slider.style.left = (w / 1.25) - (slider.offsetWidth / 1.25) + "px";
+                /*execute a function when the mouse button is pressed:*/
+                slider.addEventListener("mousedown", slideReady);
+                /*and another function when the mouse button is released:*/
+                window.addEventListener("mouseup", slideFinish);
+                /*or touched (for touch screens:*/
+                slider.addEventListener("touchstart", slideReady);
+                /*and released (for touch screens:*/
+                window.addEventListener("touchend", slideFinish);
+                function slideReady(e) {
+                /*prevent any other actions that may occur when moving over the image:*/
+                e.preventDefault();
+                /*the slider is now clicked and ready to move:*/
+                clicked = 1;
+                /*execute a function when the slider is moved:*/
+                window.addEventListener("mousemove", slideMove);
+                window.addEventListener("touchmove", slideMove);
+                }
+                function slideFinish() {
+                /*the slider is no longer clicked:*/
+                clicked = 0;
+                }
+                function slideMove(e) {
+                var pos;
+                /*if the slider is no longer clicked, exit this function:*/
+                if (clicked == 0) return false;
+                /*get the cursor's x position:*/
+                pos = getCursorPos(e)
+                /*prevent the slider from being positioned outside the image:*/
+                if (pos < 0) pos = 0;
+                if (pos > w) pos = w;
+                /*execute a function that will resize the overlay image according to the cursor:*/
+                slide(pos);
+                }
+                function getCursorPos(e) {
+                var a, x = 0;
+                e = (e.changedTouches) ? e.changedTouches[0] : e;
+                /*get the x positions of the image:*/
+                a = img.getBoundingClientRect();
+                /*calculate the cursor's x coordinate, relative to the image:*/
+                x = e.pageX - a.left;
+                /*consider any page scrolling:*/
+                x = x - window.pageXOffset;
+                return x;
+                }
+                function slide(x) {
+                /*resize the image:*/
+                img.style.width = x + "px";
+                /*position the slider:*/
+                slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+            }
+
+        </script>
+
+	</head>
+
+
+
+    <body>
+
+    
+
+    	<!-- header -->
+
+        	<header role="header">
+
+            	<div class="container">
+
+                	<!-- logo -->
+
+                    <h1>
+
+                        <a href="index.html" title="GT Portfolio"><img src="images/Logo - GT.svg" title="GT Porfolio logo" alt="GT Porfolio logo"/></a>
+
+                    </h1>
+
+                    <!-- logo -->
+
+                    <!-- nav -->
+
+                    <nav role="header-nav" class="navy">
+
+                        <ul>
+
+                            <li class="nav-active"><a href="index.html" title="Work">Work</a></li>
+
+                            <li><a href="about.html" title="About">About</a></li>
+
+                            <!-- <li><a href="blog.html" title="Blog">Blog</a></li>
+
+                            <li><a href="contact.html" title="Contact">Contact</a></li> -->
+
+                        </ul>
+
+                    </nav>
+
+                    <!-- nav -->
+
+                </div>
+
+            </header>
+
+        <!-- header -->
+
+        <!-- main -->
+
+        <main role="main-inner-wrapper" class="container">
+
+        	
+
+            
+
+            	
+
+                <!-- work details -->
+
+                	<div class="work-details">
+
+                    	
+
+                        <div class="row">
+
+                        	<div class="col-xs-12 col-sm-12 col-md-4">
+
+                            	<header role="work-title">
+
+                                	<h2>Timesheets Admin Checker</h2>
+
+                                    <a href="https://www.synnch.com.au/product/r-d-timesheets">Visit online <i class="fa fa-external-link" aria-hidden="true"></i></a>
+
+                                </header>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-8">
+                                <p><h3>Case Study: Designing the Synnch Timesheets Checker</h3><br/>
+
+
+                                <div class="centered">
+                                    <dotlottie-wc src="images/work/tschecker/Admin TS Checker.lottie" background="transparent" speed="1" direction="1" playMode="forward" autoplay loop></dotlottie-wc>
+                                    <p> <small> R&D Timesheets submitted by staff members will have to be checked by Admins for accurate reporting </small></p>
+                                </div>
+
+                            	<section>
+                                    <h4>I. Introduction / The Challenge</h4>
+                                    <p><strong>Project Goal:</strong> To design an efficient and reliable interface for administrators or managers within Synnch to review, validate, flag issues, and approve staff R&amp;D timesheets, ensuring accuracy and compliance with Australian R&amp;D Tax Incentive requirements.</p>
+                                    <p><strong>Product Context:</strong> Within the Synnch SaaS platform, accurate and compliant timesheets are fundamental for successful R&amp;D claims. This dedicated 'Timesheets Checker' feature targets Admin users specifically tasked with this critical verification responsibility.</p>
+                                    <p><strong>The Problem:</strong> Manually verifying potentially hundreds of timesheet entries across numerous staff members is incredibly time-consuming, prone to human error, and lacks a clear, auditable workflow. Admins struggled to efficiently spot inconsistencies, identify non-compliant entries (like non-contemporaneous or unallocated hours), manage high volumes, and proactively encourage staff towards timely submissions required by ATO/AusIndustry.</p>
+                                    
+                                    <p><strong>My Role &amp; Responsibilities:</strong> As the UI/UX Designer, I was responsible for designing the entire Admin Timesheets Checker experience, including the overview dashboard with KPIs, the detailed staff review table, targeted validation workflows for specific issues (Unallocated, For Review, Missed), issue flagging mechanisms, approval/rejection interactions, and the corresponding notification/feedback loop for staff members. I collaborated with the Product Owner, Developers, and potentially compliance experts.</p>
+                                    <p><strong>Constraints &amp; Timeline:</strong> A key constraint was that this module must function purely as a verification and status-tracking tool; it should not allow direct modification of the underlying R&amp;D hours data entered by staff via the main Timesheets UI.</p>
+                                </section>
+
+                            
+
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <section>
+                                <h4>II. Discovery &amp; Research / Understanding the User</h4>
+                                <p><strong>Methods:</strong> Conducted stakeholder interviews to define precise validation rules and compliance checks (e.g., contemporaneous requirements from ATO/AusIndustry). Analyzed existing manual or semi-manual verification workflows to identify bottlenecks. Held discussions with potential Admin users (or internal proxies) to understand their specific pain points, information needs, and desired level of control. Reviewed R&amp;D compliance guidelines regarding record-keeping.</p>
+                                <p>
+                                    <img src="images/work/tschecker/flow.png" alt="Process flow of Timesheets Admin Checker" class="img-responsive"/>
+                                    <br><small> Timesheet Checking Flow: Staff submit their R&D hours, which are then reviewed by admins for accuracy and either approved or rejected—ensuring compliance and data integrity.</small> 
+                                </p>
+                                <div class="insights">
+                                        <p>&#x1F4A1<strong>Key Insights:</strong></p>
+                                        <ul>
+                                            <small>
+                                                <li><strong>Action-Oriented Overview Needed:</strong> Admins required an immediate, high-level dashboard view highlighting critical issues needing attention across all staff (e.g., total unallocated hours, timesheets pending review, number of staff with missed timesheets). KPIs and global filters were essential for quick assessment.</li>
+                                                <li><strong>Contextual Staff Assessment:</strong> Effective validation required viewing key indicators per staff member within a single table view (e.g., login activity, employment status, R&amp;D hour ratios, submission frequency) to assess compliance contextually.</li>
+                                                <li><strong>Targeted Issue Resolution Workflows:</strong> Admins needed distinct, guided workflows to address specific flagged issues (Unallocated hours, items 'For Review', 'Missed' entries) efficiently.</li>
+                                                <li><strong>Proactive Compliance Encouragement:</strong> The UI needed to empower admins to proactively manage compliance by easily identifying and notifying staff about missed or late timesheets, reinforcing the need for contemporaneous entries.</li>
+                                                <li><strong>Clear Staff Feedback Loop:</strong> A separate, simplified view was necessary for staff members to easily see and address items flagged by admins (e.g., Rejected entries with reasons, Missed periods).</li>
+                                                <li><strong>Verification, Not Modification:</strong> The design must respect the constraint that this is a checker tool; core data edits happen in the main Timesheet UI, while this module manages review status and communication.</li>
+                                         </small>
+                                        </ul>
+                                </div>
+
+                                
+
+                                <h4>III. Ideation &amp; Design Exploration</h4>
+                                <p><strong>Process:</strong></p>
+                                <ul>
+                                    <li>Sketched dashboard layouts focusing on prominent KPIs and actionable status filters.</li>
+                                    <li>Designed the main admin table structure, experimenting with information density and using stacked cells for related data points (e.g., Name/Position) to improve scannability.</li>
+                                    <li>Mapped out the distinct modal/page flows triggered when an admin investigates Unallocated, For Review, or Missed timesheets for a specific staff member.</li>
+                                    <li>Designed the corresponding Staff view, focusing on clarity of required actions.</li>
+                                </ul>
+                                <p>
+                                    <img src="images/work/tschecker/sketch.png" alt="Process flow of Timesheets Admin Checker" class="img-responsive"/>
+                                    <br><small> Sketch of the Admin Timesheet Checker: A draft layout showing key admin actions—reviewing submitted timesheets, spotting missed entries, and flagging unallocated R&D hours.</small> 
+                                </p>
+
+
+                                <p><strong>Iterations:</strong></p>
+                                <ul>
+                                    <li>Explored various ways to visually represent the key statuses (Unallocated, For Review, Missed) both globally and per staff member, iterating towards clear numerical indicators combined with clickable actions.</li>
+                                    <li>Refined the table column order based on feedback regarding admin priorities during review.</li>
+                                    <li>Considered different interaction patterns for approving/rejecting items within the 'For Review' workflow.</li>
+                                    <li>Addressed the challenge of visualizing the time-dependent 'Missed Timesheets' status clearly.</li>
+                                </ul>
+                                <p>
+                                    <img src="images/work/tschecker/Initial Timesheet Admin page.png" alt="" class="img-responsive"/>
+                                    <small> Early high-fidelity mockup of the Admin Dashboard — content-heavy and with separate data and status pills, later refined for clarity.</small>
+
+                                <h4>IV. The Solution / Design Execution</h4>
+
+                                <div class="centered">
+                                    <dotlottie-wc src="images/work/tschecker/Admin Solution - Start.lottie" background="transparent" speed="1" direction="1" playMode="forward" autoplay loop></dotlottie-wc>
+                                    <p> <small> Actionable status pills like Unallocated, Missed Timesheets, and For Review help admins focus on what’s urgent in a content-heavy timesheet view. </small></p>
+                                </div>
+
+                                <p><strong>🧭 Admin Dashboard &amp; Global Filters</strong></p>
+                                
+                                <div class="img-comp-container">
+                                    <div class="img-comp-img">
+                                      <img src="images/work/tschecker/Initial Timesheet Admin page.png" alt="" width=972/>
+                                    </div>
+                                    <div class="img-comp-img img-comp-overlay">
+                                      <img src="images/work/tschecker/Admin Dashboard.png" alt="" width=972/>
+                                    </div>
+                                    
+                                </div>
+                                <p><small> Slide the cursor to compare. Admin Dashboard - Comparison of the initial high-fidelity mockup and the final implemented Admin Dashboard — showing refinements in layout, clarity, and data presentation.</small> </p>
+
+                                <p>Created a top-level dashboard within the Timesheets Checker tab (visible only to Admins).</p>
+                                <p>Displayed key compliance KPIs at a glance:</p>
+                                <ul>
+                                    <li>Total R&amp;D Hours</li>
+                                    <li>R&amp;D %</li>
+                                    <li>Unallocated Hours</li>
+                                    <li>Number of Missed Timesheets</li>
+                                </ul>
+                                <p>Introduced global filter buttons:</p>
+                                <ul>
+                                    <li>Unallocated</li>
+                                    <li>For Review</li>
+                                    <li>Missed Timesheets</li>
+                                </ul>
+                                <p>Clicking any filter instantly narrows the main table to highlight only staff with that issue type.</p>
+
+                                <p><strong>📊 Admin Staff Review Table</strong></p>
+
+                                <p>Built a detailed, filterable table (by Financial Year) offering a staff-level overview.</p>
+                                <p>Key columns:</p>
+                                
+                                <ul>
+                                    <li>Staff Name / Position (stacked format)</li>
+                                    <li>Last Login (sortable – indicates engagement)</li>
+                                    <li>Employment, BAU, and R&amp;D Hours (% calculated)</li>
+                                    <li>Submitted Timesheets count</li>
+                                    <li>Timesheet Cycle</li>
+                                    <li>Email Reminder Cycle</li>
+                                </ul>
+
+
+                                <p><strong>🚨 Actionable Status Columns</strong></p>
+                                <p>Final table columns act as drill-down triggers for common issues:</p>
+                                <ul>
+                                    <li>Unallocated Hours (#)</li>
+                                    <li>For Review (#, with color-coded statuses)</li>
+                                    <li>Missed Timesheets (#)</li>
+                                    <li>Notify Staff button</li>
+                                </ul>
+                                <p>Clicking these initiates focused workflows for resolution.</p>
+
+                                <p><strong>🧩 Targeted Issue Workflows (Admin)</strong></p>
+
+                                <div class="work-images grid">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><img src="images/work/tschecker/Missed.png" alt="Missed Timesheets filter is active" class="img-responsive"></div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><img src="images/work/tschecker/Ready for Review.png" alt="For review filter is active" class="img-responsive"></div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><img src="images/work/tschecker/With Unallocated.png" alt="With unallocated filter is active" class="img-responsive"></div>
+                                    <p><small> Our goal is to simplify admin workflow by displaying these 3 major filters: Missed, Ready for Review, and With Unallocated Hours timesheets.</small></p>
+                                                                           
+                                </div>
+                                <p><strong>Unallocated Hours:</strong> Unallocated Hours refer to R&D hours that haven't been formally tagged to any specific activity. By the end of the financial year—and especially during R&D tax incentive submission—these hours must be fully allocated, as unallocated hours are considered non-compliant. Ensuring all hours are properly tagged should be a key responsibility for admins during review and submission.</p>
+                                <p><strong>For Review:</strong> Displays timesheets requiring admin review. Admins can Approve or Reject with mandatory remarks.</p>
+                                <p><strong>Missed Timesheets:</strong>Missed Timesheets are periods within the selected cycle (weekly or monthly) where no R&D hours have been recorded, and the time window has already passed. A monthly cycle allows more leeway, while a weekly cycle enables quicker tracking. The goal is to encourage regular logging of R&D hours by staff and admins—ultimately aiming for zero missed timesheets to ensure accuracy and compliance.</p>
+
+                                <p><strong>👤 Dedicated Staff Member View</strong></p>
+
+                                <p>
+                                    <img src="images/work/tschecker/Staff Status.png" alt="Process flow of Timesheets Admin Checker" class="img-responsive"/>
+                                    <br><small> Staff View: Displays timesheet statuses giving team members clear visibility into their R&D tracking progress. </small> 
+                                </p>
+                                <p>Separate Checker view for Staff users, tailored to their needs. Shows personal KPIs and status-based filters:</p>
+                                <ul>
+                                    <li>Rejected</li>
+                                    <li>Missed</li>
+                                    <li>With Unallocated</li>
+                                    <li>Open</li>
+                                    <li>Planned</li>
+                                    <li>Submitted</li>
+                                    <li>Approved</li>
+                                </ul>
+                                <p>Displays individual time periods with:</p>
+                                <ul>
+                                    <li>Status</li>
+                                    <li>R&amp;D totals</li>
+                                    <li>Unallocated hours</li>
+                                    <li>Admin remarks (for rejections)</li>
+                                    <li>Action buttons (e.g., View/Edit, linking to main Timesheet UI)</li>
+                                </ul>
+
+                                <p><strong>📁 Data Export</strong></p>
+                                <p>Added CSV export for the Admin table to support offline reviews, audits, and recordkeeping.</p>
+                                <p>
+                                    <img src="images/work/tschecker/Dashboard Staff.png" alt="Dashboard UI of Staff Members" class="img-responsive"/>
+                                    <br><small> Dashboard UI of Staff Members </small> 
+                                </p>
+
+
+                                <div class="insights"> 
+                                    <p><strong>💡 Design Rationale</strong></p>
+                                
+                                    <ul>
+                                        <li>Admin dashboards highlight what needs attention right away.</li>
+                                        <li>Tables give context before you dive into specific issues.</li>
+                                        <li>Dedicated workflows tackle each compliance risk efficiently..</li>
+                                        <li>The staff view creates a feedback loop, guiding users to correct or finish their entries.</li>
+                                        <li>“Checker” role boundaries are strictly maintained to prevent unintended edits.</li>
+                                        <li>Encourages a proactive approach to compliance management.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- <p><strong>🧪 Prototypes</strong></p>
+                                <p>Developed interactive prototypes for both Admin and Staff flows:</p>
+                                <ul>
+                                    <li><strong>Admin:</strong> Filtering, drilling into issues, reviewing and approving/rejecting timesheets.</li>
+                                    <li><strong>Staff:</strong> Viewing missed/rejected entries and taking action.</li>
+                                </ul>
+
+                                <p><strong>🧱 Design System Application</strong></p>
+                                <p>Applied components from the existing Synnch UI Kit to ensure:</p>
+                                <ul>
+                                    <li>Consistency across modules</li>
+                                    <li>Faster handoff to development</li>
+                                    <li>Reduced cognitive load for users familiar with the platform</li>
+                                </ul> -->
+
+                                <h4>V. Validation &amp; Iteration / Testing</h4>
+                                <p>During initial testing, we noticed some confusion between global filter buttons and individual staff action buttons—users needed clearer visual distinctions or supporting tooltips to navigate effectively. Additionally, the way the 'Missed Timesheets' count updated based on the selected cycle wasn’t immediately intuitive, highlighting the need for either clearer UI feedback or an explanatory prompt. Given the information-rich admin table, we also had to fine-tune the layout and typography to maintain readability and reduce visual clutter.</p>
+
+                                <h4>VI. Impact &amp; Results</h4>
+                                <p><strong>Outcome:</strong> Delivered a comprehensive Admin Timesheets Checker module providing powerful tools for verification, compliance management, and staff feedback within the Synnch platform.</p>
+                                <p><strong>Measurable Impact (Intended/Projected):</strong></p>
+                                <ul class="mylist">
+                                    <li>&#x2705; Cuts down admin time spent manually checking timesheets</li>
+                                    <li>&#x2705; Boosts accuracy and consistency in reviews and approvals</li>
+                                    <li>&#x2705; Gives admins clear insights to manage compliance and prompt timely entries</li>
+                                    <li>&#x2705; Keeps an auditable trail of each review stage.</li>
+                                    <li>&#x2705; Improves staff experience by clearly flagging missing or rejected entries</li>
+                                </ul>
+
+                                <h4>VII. Learnings &amp; Reflection</h4>
+                                <div class="insights">
+                                    
+                                <p><strong>🔑 Key Takeaways</strong></p>
+                                <p><small><strong>Designing for Actionability:</strong> This project reinforced how vital it is for admin dashboards to highlight what needs attention—missed entries, errors, or exceptions—rather than just presenting data. Designing with this “action-first” mindset helped prioritize meaningful insights over raw information.</small></p>
+                                <p><small><strong>Role-Based Interface Thinking:</strong> I learned to approach interface design through the lens of different user roles. While Admins and Staff interact with the same underlying data, their workflows, goals, and interface needs differ. Creating distinct but connected experiences for each role was a valuable design exercise.</small></p>
+                                <p><small><strong>Flipping the Design Lens:</strong> A key insight was learning to "invert" the typical design focus—shifting from showcasing complete data to intentionally surfacing what's missing or what's wrong. This was especially important for features like missed timesheet alerts or status tracking tools.</small></p>
+                                <p><small><strong>Designing for Time-Sensitive Data:</strong> Understanding that data status evolves over time (e.g., compliance cycles, submission windows) taught me to think temporally. UI elements needed to reflect these dynamics clearly for effective monitoring and decision-making.</small></p>
+                                </div>
+
+                                <p><strong>💡 Challenges that Drove Learning</strong></p>
+                                <p><strong>Simplifying Complex Rules:</strong> Representing R&amp;D compliance concepts like contemporaneity or cycle-based tracking in an intuitive way was a major UI challenge. I had to find ways to surface these rules clearly without overwhelming the user.</p>
+                                <p><strong>Managing Dense Information:</strong> Admin tools required a lot of data in one view. Finding the right balance between information density and ease of scanning meant refining layouts, typography, and interaction feedback carefully.</p>
+                                <p><strong>Protecting Data Integrity:</strong> Since the Checker UI was meant for verification only (not editing), I had to clearly define boundaries—ensuring users could take action about data without accidentally modifying it.</p>
+
+                                <p><strong>🔭 Future Considerations</strong></p>
+                                <ul>
+                                    <li>Introduce advanced notification rules or alert systems to help Admins respond more quickly to issues.</li>
+                                    <li>Explore custom dashboard views to align better with different organizational needs.</li>
+                                    <li>Investigate deep-linking between the Checker view and the main Timesheet interface to streamline corrective actions.</li>
+                                </ul>
+
+                            </section>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        
+
+                        <div class="work-images grid">
+
+                            <ul class="grid-lod effect-2" id="grid">
+
+                                <li><img src="images/work/tschecker/Admin Dashboard.png" alt="" class="img-responsive"/></li>
+                                <li><img src="images/work/tschecker/Missed.png" alt="" class="img-responsive"/></li>
+                                <li><img src="images/work/tschecker/Missed Timesheets.png" alt="" class="img-responsive"/></li>
+                                <li><img src="images/work/tschecker/Ready for Review.png" alt="" class="img-responsive"/></li>
+                                <li><img src="images/work/tschecker/With Unallocated.png" alt="" class="img-responsive"/></li>
+                                <li><img src="images/work/tschecker/Dashboard Staff.png" alt="" class="img-responsive"/></li>
+
+                            </ul>
+
+                        </div>
+
+                        </div>
+                        <div class="row"> 
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"><a href="index.html" class="btn">&#x2B60; Back to List</a></div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right"><a href="works-evidence.html" class="btn"> Read More: Evidence AI Module &#x2B62;</a></div>
+                        </div>
+
+                        
+
+                    </div>
+
+                <!-- work details -->
+
+            
+
+            
+
+        </main>
+
+    	<!-- main -->
+
+         <!-- footer -->
+
+         <footer role="footer">
+
+            <!-- logo -->
+
+                <h1>
+
+                    <a href="index.html" title="avana LLC"><img src="images/Logo - GT.svg" title="avana LLC" alt="avana LLC"/></a>
+
+                </h1>
+
+            <!-- logo -->
+
+            <!-- nav -->
+
+            <nav role="footer-nav">
+
+            	<ul>
+
+                	<li><a href="index.html" title="Work">Work</a></li>
+
+                    <li><a href="about.html" title="About">About</a></li>
+
+                    <!-- <li><a href="blog.html" title="Blog">Blog</a></li>
+
+                    <li><a href="contact.html" title="Contact">Contact</a></li>  -->
+
+                </ul>
+
+            </nav>
+
+            <!-- nav -->
+
+            <ul role="social-icons">
+
+            	<!-- 
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+                <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> -->
+
+                <li><a href="https://www.linkedin.com/in/gerard-theodore-alcuizar/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+
+            </ul>
+
+            <p class="copy-right">&copy; 2025  GT Alcuizar. All rights Resved</p>
+
+        </footer>
+
+        <!-- footer -->
+
+    
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+
+        <!-- custom -->
+
+		<script src="js/nav.js" type="text/javascript"></script>
+
+        <script src="js/custom.js" type="text/javascript"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
+
+		<script src="js/effects/imagesloaded.js"  type="text/javascript"></script>
+
+		<script src="js/effects/classie.js"  type="text/javascript"></script>
+
+		<script src="js/effects/AnimOnScroll.js"  type="text/javascript"></script>
+
+        <script src="js/effects/modernizr.custom.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script> 
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+        <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script> 
+
+        <!-- jquery.countdown -->
+
+        <script src="js/html5shiv.js" type="text/javascript"></script>
+        <script>initComparisons();</script>
+
+    </body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="test.css" />
+    <title>Subtle Scroll Animations</title>
+</head>
+
+<body>
+    <a href="index.html">go</a>
+    <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#fade">Fade In</a>
+        <a href="#slide">Slide In</a>
+        <a href="#scale">Scale</a>
+        <a href="#stagger">Stagger</a>
+        <a href="#parallax">Parallax</a>
+        <a href="#counter">Counters</a>
+        <a href="#progress">Progress</a>
+        <a href="#floating">Floating</a>
+        <a href="#reveal">Text Reveal</a>
+        <a href="#css-only">CSS Only</a>
+    </nav>
+
+    <div class="spacer">👇 Scroll down to see animations</div>
+
+    <!-- 1. FADE IN ANIMATIONS -->
+    <section id="fade" class="section">
+        <h2 class="fade-in">Fade In on Scroll</h2>
+        <p class="fade-in">The most basic and subtle animation. Elements gently fade in as they enter the viewport.</p>
+        <div class="demo-cards">
+            <div class="demo-card fade-in">
+                <h3>Smooth</h3>
+                <p>Clean fade with subtle upward movement</p>
+            </div>
+            <div class="demo-card fade-in">
+                <h3>Elegant</h3>
+                <p>Perfect for content reveals</p>
+            </div>
+            <div class="demo-card fade-in">
+                <h3>Versatile</h3>
+                <p>Works everywhere</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SLIDE ANIMATIONS -->
+    <section id="slide" class="section">
+        <h2 class="slide-left">Slide In Animations</h2>
+        <p class="slide-right">Elements slide in from different directions for dynamic reveals.</p>
+        <div class="demo-cards">
+            <div class="demo-card slide-left">
+                <h3>From Left</h3>
+                <p>Creates directional flow</p>
+            </div>
+            <div class="demo-card slide-right">
+                <h3>From Right</h3>
+                <p>Adds visual interest</p>
+            </div>
+            <div class="demo-card slide-left">
+                <h3>Alternating</h3>
+                <p>Keeps things lively</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SCALE ANIMATIONS -->
+    <section id="scale" class="section">
+        <h2 class="scale-in">Scale Animations</h2>
+        <p class="scale-in">Elements grow into view with a gentle scaling effect.</p>
+        <div class="demo-cards">
+            <div class="demo-card scale-in">
+                <h3>Scale In</h3>
+                <p>Gentle zoom effect</p>
+            </div>
+            <div class="demo-card scale-in">
+                <h3>Attention</h3>
+                <p>Draws focus naturally</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. STAGGER ANIMATIONS -->
+    <section id="stagger" class="section">
+        <h2 class="fade-in">Stagger Animations</h2>
+        <p class="fade-in">Multiple elements animate in sequence for a cascading effect.</p>
+        <div class="demo-cards stagger-container">
+            <div class="demo-card stagger-item">
+                <h3>First</h3>
+                <p>0.1s delay</p>
+            </div>
+            <div class="demo-card stagger-item">
+                <h3>Second</h3>
+                <p>0.2s delay</p>
+            </div>
+            <div class="demo-card stagger-item">
+                <h3>Third</h3>
+                <p>0.3s delay</p>
+            </div>
+            <div class="demo-card stagger-item">
+                <h3>Fourth</h3>
+                <p>0.4s delay</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PARALLAX SCROLLING -->
+    <section id="parallax" class="parallax-container">
+        <div class="parallax-bg"></div>
+        <div class="parallax-content">
+            <h2>Parallax Scrolling</h2>
+            <p>Background moves at different speed than foreground</p>
+        </div>
+        <div class="floating-elements" id="floatingElements"></div>
+        
+    </section>
+
+    <!-- 6. SCROLL COUNTERS -->
+    <section id="counter" class="section">
+        <h2 class="fade-in">Animated Counters</h2>
+        <p class="fade-in">Numbers count up when they come into view</p>
+        <div class="demo-cards">
+            <div class="demo-card fade-in">
+                <div class="counter" data-target="1250">0</div>
+                <p>Happy Clients</p>
+            </div>
+            <div class="demo-card fade-in">
+                <div class="counter" data-target="95">0</div>
+                <p>Success Rate %</p>
+            </div>
+            <div class="demo-card fade-in">
+                <div class="counter" data-target="500">0</div>
+                <p>Projects Done</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROGRESS BARS -->
+    <section id="progress" class="section">
+        <h2 class="fade-in">Progress Animations</h2>
+        <p class="fade-in">Visual progress indicators that fill on scroll</p>
+        <div style="max-width: 600px; width: 100%;">
+            <h4>HTML/CSS</h4>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="90"></div>
+            </div>
+            <h4>JavaScript</h4>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="85"></div>
+            </div>
+            <h4>React</h4>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="75"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FLOATING ELEMENTS -->
+    <section id="floating" class="section">
+        <h2 class="fade-in">Floating Elements</h2>
+        <p class="fade-in">Background elements that move based on scroll position</p>
+        <div class="demo-cards">
+            <div class="demo-card fade-in">
+                <h3>Subtle Movement</h3>
+                <p>Adds depth without distraction</p>
+            </div>
+            <div class="demo-card fade-in">
+                <h3>Visual Interest</h3>
+                <p>Makes pages feel alive</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. TEXT REVEAL -->
+    <section id="reveal" class="section">
+        <div class="text-reveal">
+            <h2 class="text-reveal-inner">Text Reveal Effect</h2>
+        </div>
+        <div class="text-reveal">
+            <p class="text-reveal-inner">Text slides up from behind a mask, creating a curtain-like reveal effect.</p>
+        </div>
+    </section>
+
+    <!-- 10. CSS-ONLY ANIMATIONS -->
+    <section id="css-only" class="section">
+        <h2 class="css-scroll-anim">CSS-Only Scroll Animations</h2>
+        <p class="css-scroll-anim">Using the new View Timeline API (Chrome 115+)</p>
+        <div class="demo-cards">
+            <div class="demo-card css-scroll-anim">
+                <h3>Modern CSS</h3>
+                <p>No JavaScript required</p>
+            </div>
+            <div class="demo-card css-scroll-anim">
+                <h3>Performance</h3>
+                <p>Browser optimized</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer">End of demos 🎉</div>
+</body>
+<script src="test.js"></script>
+</html>

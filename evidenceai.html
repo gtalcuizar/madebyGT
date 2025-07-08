@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/Images/Home/Logo - GT.ico">
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+
+  <title>Made by GT</title>
+
+</head>
+<body>
+    <header class="nav maxwidth-container fade-in" id="navbar">
+            
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Home/Logo - GT.png" alt="GT Logo" /></a>
+                </div>
+                <nav>
+                    <a href="index.html" title="Home">Home</a>
+                    <a href="index.html#work" title="Work">Work</a>
+                    <a href="about.html" title="About">About</a>
+                </nav>
+    </header>
+    <main>
+        <div class="main-container maxwidth-container">
+            <section class="bannerimg-container stagger-container">
+                <img src="Images/Work/EvidenceAI/headermain.png" alt="" class="fade-in">
+                <img src="Images/Work/EvidenceAI/Centralized.png" alt="" class="fade-in stagger-item">
+            </section>
+
+            <section class="article-container stagger-container">
+                
+                    <p>2025 / Case Study</p>
+                    <h1>Evidence AI Module</h1>
+                    <div>
+                    <ul>
+                        <li class="pill stagger-item">UI & UX Design</li>
+                        <li class="pill stagger-item">UX Research</li>
+                        <li class="pill stagger-item">AI-Driven UX</li>
+                        <li class="pill stagger-item">Stakeholder Engagement</li>
+                        <li class="pill stagger-item">Cross-Functional Collaboration</li>
+                        <li class="pill stagger-item">Multi-Role Design</li>
+                    </ul>
+                    </div>
+
+                    <p class="fade-in stagger-item">The Synnch Evidence AI Module is a smart, central hub for <span class="text-highlight"> uploading and managing R&D claim files</span> like reports, invoices, and notes. </p>
+                    <p class="fade-in stagger-item">Powered by AI, it <span class="text-highlight">analyzes and scores each file’s relevance against R&D tax criteria </span>— matching them to the appropriate project and activity. </p>
+                    <p class="fade-in stagger-item">This streamlines compliance, saves time, and gives users greater confidence in the accuracy of their evidence.</p>
+                
+            </section>
+
+            <section class="article-container">
+                <div class="TLDR fade-in">
+                    <h2>TLDR; Long Story Short</h2>
+                    <p>I designed the Evidence AI Module for Synnch—a smart system that uses AI to automatically score and match R&D claim documents to the right projects. </p>
+                    <h3>Key Features</h3>
+                    <p>Automatically analyzes and scores uploaded documents based on R&D tax criteria, matching them to the correct project and activity. </p>
+                    <p>Centralizes evidence management.</p>
+                    <p>Reduces manual review, and gives users clear visibility into the strength of their files. </p>
+                    <h3>Impact</h3>
+                    <p><span class="text-highlight">Replaced slow, manual review processes</span> which gives both consultants and claimants more control and clarity.</p>
+                    <h3>Key Takeaway</h3>
+                    <p>I learned to design AI-driven experiences that prioritize transparency and user trust. </p>
+                    <p>Balancing AI strengths with its unpredictability pushed me to create flexible UI patterns, especially for handling inconsistencies and duplicates. </p>
+                </div>
+
+                <div class="modal hidden">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage" />
+                    <div class="nav-buttons">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Mockup.png" alt="" class="img-container" /></div>
+                </div>
+            </section>
+
+            <section class="article-container fade-in">
+                <h2>Design Process</h2>
+                <h3>The Problem</h3>
+                <p>Manually reviewing thousands of files is slow, expensive, and subjective. Consultants were overwhelmed, while claimants lacked visibility into how strong their evidence really was. Managing and organizing all this data through disconnected tools only added to the pain. </p>
+
+                <h3>Research</h3>
+                <div class="research-container stagger-container">
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">groups</span>Deep-dive sessions with the CEO, Business Analyst, and Product Owner</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">document_search</span>Analysis of R&D compliance documents</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">network_intel_node</span>Competitive research on evidence and AI tools</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">split_scene</span>Finding references for UX in AI-driven interfaces</div>
+                </div>
+
+                <h3>How it works</h3>
+                <p>The Evidence module parses uploaded files and uses a custom OpenAI LLM to evaluate their relevance to project activities against 9 eligibility criteria. </p>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Relevance.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/aiflow.png" alt="" class="img-container" /></div>
+                </div>
+
+                <p><span class="text-highlight">A relevance percentage is calculated</span> to help consultants and claimants assess claims faster, eliminate manual review, and save time.</p>
+                <h3>Defining Roles and Users</h3>
+                <div class="persona-container">
+
+                    <div class="persona">
+                        <img src="Images/Work/EvidenceAI/Consultant.png" alt="img-round" />
+                        <div class="persona-content">
+                            <b>R&D Consulants</b>
+                            <p>Help Claimants prepare and lodge their R&D Tax Incentive Claims to the Australian government.</p>
+                        </div>
+                    </div>
+
+                    <div class="persona">
+                        <img src="Images/Work/EvidenceAI/claimant.png" alt="img-round" />
+                        <div class="persona-content">
+                            <b>Claimants</b>
+                            <p>Oversee R&D efforts to secure funding, ensure team compliance, and maintain visibility across activities and contributions.</p>
+                        </div>
+                    </div>
+
+                    <div class="persona">
+                        <img src="Images/Work/EvidenceAI/staff.png" alt="img-round" />
+                        <div class="persona-content">
+                            <b>Staff Members</b>
+                            <p>Staff members perform eligible R&D work and log their hours, forming the core evidence that supports their company’s R&D tax incentive claims.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <h3>Identified Key Insights</h3>
+                <p><b>Consultants needed speed:</b> Fast uploads, bulk actions, and reliable AI assessments.</p>
+                <p><b>Claimants needed transparency:</b> Simple, clear explanations of AI scores and how they were calculated.</p>
+                <p><b>AI needed simplification:</b> Showing complex criteria breakdowns had to be digestible.</p>
+                <p><b>Data challenges were real:</b>Duplicate files, mixed sources, and unclear processing states needed clear UI handling.</p>
+                <p><b>Consistency mattered:</b> Aligning with Synnch’s design system would make the module feel like a natural extension of the platform.</p>
+
+                <h2>UI Sketches</h2>
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Document File Manager.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/file management.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Run Analysis.png" alt="" class="img-container" /></div>
+
+                </div>
+                <h3>Initial Designs</h3>
+                <p>The initial design has more tabs, more steps - which means more friction for users. 
+                    We simplified the Evidence AI flow by removing the file repository step.—
+                    files are now uploaded and evaluated automatically within the project context.</p>
+                
+
+                <h2>Design Execution</h2>
+                <h3>Simplified File Uploading</h3>
+                <div>
+                    <b>Problem</b>
+                    <p>The original multi-step upload process was overly complex and misaligned with the tool’s core purpose—quickly determining a file’s relevance to R&D criteria. <span class="text-highlight">Users just wanted a simple way to check if their files were eligible.</span></p>
+                </div>
+
+                <div>
+                    <b>Designed Solution</b>
+                    <p>We streamlined the flow: users can now drag and drop files directly into the table. Files are automatically uploaded and instantly processed by the AI, returning a relevance score and eligibility breakdown.</p>
+                </div>
+
+                <div>
+                    <b>Why</b>
+                    <p>By removing unnecessary steps, we reduced friction and highlighted the module’s core value—fast, AI-powered document evaluation. This approach keeps the user focused, speeds up decision-making, and reinforces Evidence AI as a purpose-built tool, not a document manager.</p>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Evidence Dashboard.png" alt="" class="img-container" /></div>
+                </div>
+
+                <h3>Human-AI Interfaces</h3>
+                <div>
+                    <b>Problem</b>
+                    <p>Even with current AI technological progress, <span class="text-highlight">users still face friction—slow processing, unclear system feedback, and inconsistent results </span>from identical inputs. This creates confusion and reduces trust in the tool.</p>
+                </div>
+
+                <div>
+                    <b>Designed Solution</b>
+                    <p>We introduced visual indicators for each stage of the file processing journey (uploading, in-progress, complete, failed), added clear messages confirming success or failure, and created a Side Panel that stores processing history and AI decisions—giving users context and the option to revert to past outputs.</p>
+                </div>
+
+                <div>
+                    <b>Why</b>
+                    <p>Transparent communication helps set expectations, reduce frustration, and build user confidence in the system. By turning AI limitations into understandable feedback, we create a more trustworthy and enjoyable experience—encouraging continued use and long-term adoption.</p>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/errorstates.png" alt="" class="img-container" /></div>
+                </div>
+
+                <h3>Table Layout and Information Display</h3>
+                <div>
+                    <b>Problem</b>
+                    <p>The Evidence AI Module needs to present a large amount of data—file names, relevance scores, project associations, and AI feedback. With so many columns and variables, <span class="text-highlight">the challenge was making it easy for users to identify what matters,</span> quickly distinguish files by project, and take action without feeling overwhelmed.</p>
+                </div>
+                <div>
+                    <b>Designed Solution</b>
+                    <p>We streamlined the table to display only the most essential information at a glance—AI evaluation results, file status, and associated project. Visual cues and simplified columns guide users, while bulk selection enables efficient multi-file actions.</p>
+                    <p><span class="text-highlight">Collapsable side panel reveals detailed information </span>about each file, including AI process history, decision reasoning, and the ability to revert to previous results. This allows users to explore context and regain control—all while staying within the same screen. </p>
+                </div>
+                <div>
+                    <b>Why</b>
+                    <p>The table serves as the central workspace for uploading, reviewing, and acting on files. By balancing clarity and functionality, we created a multi-purpose interface that supports user efficiency and mirrors familiar patterns from other SaaS tools—reducing the learning curve while maintaining powerful control.</p>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/EvidenceAI/Side Panel.png" alt="" class="img-container" /></div>
+                </div>
+
+                <h2>Learnings and Reflections</h2>
+                <p>Designing the Evidence AI Module as the sole designer of the team taught me how to create AI-driven experiences that balance automation with clarity. </p>
+                <p>I learned that transparency is essential—<span class="text-highlight">users must understand what the AI did and why.</span> </p>
+                <p>Supporting AI’s strengths while <span class="text-highlight">accounting for its unpredictability </span>required thoughtful, flexible UI design, especially around inconsistencies and duplicates. </p>
+                <p>Collaborating closely with AI engineers also helped me bridge the gap between complex logic and intuitive user experience.</p>
+                <div class="readnext">
+                    <a href="#navbar"><button class="backtop">Back to top  <span class="material-symbols-outlined">arrow_upward</span></button></a>
+                    <a href="timesheets.html"><button class="button">Read Next: Timesheets Module  <span class="material-symbols-outlined"> arrow_right_alt </span></button></a>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+        <img src="Images/Home/Logo - GT.png" alt="GT Logo" />
+        </div>
+        <div class="foot-notes">
+            <i class='bxl  bx-linkedin-square'  style='color:#2867B2'></i>
+            <a href="https://www.linkedin.com/in/gerard-theodore-alcuizar" target="_blank"> Connect with me on LinkedIn </a>
+            <p>© 2025 Made by GT. All rights reserved. </p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

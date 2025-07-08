@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/Images/Home/Logo - GT.ico">
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+
+  <title>Made by GT</title>
+
+</head>
+<body>
+    <header class="nav maxwidth-container fade-in" id="navbar">
+            
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Home/Logo - GT.png" alt="GT Logo" /></a>
+                </div>
+                <nav>
+                    <a href="index.html" title="Home">Home</a>
+                    <a href="index.html#work" title="Work">Work</a>
+                    <a href="about.html" title="About">About</a>
+                </nav>
+    </header>
+    <main>
+        <div class="main-container maxwidth-container">
+            
+
+            <section class="article-container stagger-container">
+                <p>2024 / Case Study</p>
+                <h1>BidCrete</h1>
+                <div>
+                   <ul>
+                    <li class="pill stagger-item">UI & UX Design</li>
+                    <li class="pill stagger-item">UX Research</li>
+                    <li class="pill stagger-item">SaaS Design</li>
+                    <li class="pill stagger-item">Stakeholder Engagement</li>
+                    <li class="pill stagger-item">Cross-Functional Collaboration</li>
+                    <li class="pill stagger-item">Multi-Role Design</li>
+                   </ul>
+                </div>
+                
+                <section class="bannerimg-container stagger-container">
+                <img src="Images/Work/BidCrete/BidCrete Header.svg" alt="" class="fade-in stagger-item">
+            </section>
+
+                <div>
+                    <p class="fade-in stagger-item">BidCrete is a one-stop platform that enables builders to purchase ready-mix concrete from local suppliers.</p>
+                    <p class="fade-in stagger-item">BidCrete simplifies ordering, eliminates bidding chaos, and offers clear, upfront pricing—helping users save time, reduce costs, and manage projects more efficiently.</p>
+                </div>
+            </section>
+
+            <section class="article-container">
+                <div class="TLDR fade-in">
+                    <h2>TLDR; Long Story Short</h2>
+                    <p>BidCrete is a construction tech platform that connects builders with local ready-mix concrete suppliers, streamlining time-critical orders. I designed the Admin Center, Builder’s Mobile App, and Web App to replace manual, fragmented processes with a unified digital experience.</p>
+                    <h3>Key Features</h3>
+                    <p><b>Admin Center:</b> Centralized dashboard to manage orders, supplier bids, proximity-based supplier matching, delivery schedules, and live order tracking.</p>
+                    <p><b>Builder App (Web & Mobile):</b> Real-time quoting, supplier matching, order placement, delivery updates, and reordering—designed for both on-site and office use.</p>
+                    <h3>Impact</h3>
+                    <p>The redesigned platform reduced manual coordination, minimized order errors, and gave builders real-time control. </p>
+                    <p>Admins gained operational clarity, while builders saved time and costs with more accurate, flexible delivery workflows.</p>
+                    <h3>Key Takeaway</h3>
+                    <p>Designing BidCrete as the sole designer taught me how to simplify complex, multi-role workflows—transforming a 27-column shared spreadsheet into intuitive digital tools.</p>
+                    <p>It reinforced the value of collaborative design, edge case planning, and building scalable systems for high-stakes, time-sensitive industries.</p>
+                </div>
+
+                <div class="modal hidden">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage" />
+                    <div class="nav-buttons">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/MockupAdmin.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/MockupBuilder.png" alt="" class="img-container" /></div>
+                </div>
+            </section>
+
+            <section class="article-container fade-in">
+                <h2>Design Process</h2>
+                <h3>The Problem</h3>
+                <p>Ordering concrete is uniquely time-sensitive: concrete is perishable and must be poured within a limited time after mixing. </p>
+                <p>As the company expanded, inefficiencies emerged due to <span class="text-highlight">fragmented tools, manual workflows, and the time-sensitive nature of concrete delivery.</span></p>
+
+                <h3>Research</h3>
+                <div class="research-container stagger-container">
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">document_search</span>Interpreted requirements from meeting transcripts</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">groups</span>Conducted interviews with stakeholders and admins.</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">network_intel_node</span>Synthesized the information given by the stakeholders.</div>
+                    <div class="emphasize stagger-item"><span class="material-symbols-outlined">family_history</span>Visualized the purchasing flow using swimlane diagram</div>
+                </div>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/Swimlane.png" alt="" class="img-container" /></div>
+                </div>
+                
+                <h3>Defining Roles and Users</h3>
+                <div class="persona-bidcrete-container">
+
+                    <div class="persona-bidcrete">
+                        <img src="Images/Work/BidCrete/Builders.png" alt="" />
+                        <div class="personabidcrete-content">
+                            <b>Builders</b>
+                            <p>Builders place concrete orders on-the-go, often while on-site in tough conditions. They’re not always tech-savvy, so they need simple navigation, large buttons, and clear feedback. Real-time communication, order visibility, and timely updates are essential.</p>
+                        </div>
+                    </div>
+
+                    <div class="persona-bidcrete">
+                        <img src="Images/Work/BidCrete/Admin.png" alt="" />
+                        <div class="personabidcrete-content">
+                            <b>Admins and Operations Team</b>
+                            <p>Admins manage builder orders through an internal portal and manually relay them to suppliers, often by phone. This process is prone to human error due to frequent copy-pasting between apps and spreadsheets.</p>
+                        </div>
+                    </div>
+
+                    <div class="persona-bidcrete">
+                        <img src="Images/Work/BidCrete/Supplier.png" alt="" />
+                        <div class="personabidcrete-content">
+                            <b>Suppliers</b>
+                            <p>Suppliers receive order requests from admins and responds with quotes and availability. They need accurate data to plan batch orders and delivery logistics</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <h3>UI Sketching</h3>
+                <p>In designing the admin dashboard, I aimed to mirror the layout of the admins’ familiar “Excel Bible” to minimize friction and reduce the learning curve.</p>
+                <p>Additional details are shown in a collapsible side panel, allowing admins to access deeper context without navigating away from the main interface.</p>
+                <p>With so many columns in the original spreadsheet, I <span class="text-highlight"> prioritized the most critical information needed to manage and fulfill orders efficiently.</span></p>
+
+                <div class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/bible.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/Sketch.png" alt="" class="img-container" /></div>
+
+                </div>
+                
+                
+                <h2>Design Execution</h2>
+                <h3>Admin Center Dashboard </h3>
+                <section class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/Admintable.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/AdminChat.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/AdminContacts.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/AdminNotif.png" alt="" class="img-container" /></div>
+                </section>
+                <div>
+                    <b>Problem</b>
+                    <p>Admins were <span class="text-highlight">overwhelmed by manual coordination</span> — handling phone calls, copying data across spreadsheets, and managing orders using excel spreadsheet. This led to errors, miscommunication, and inefficiencies.</p>
+                </div>
+                <div>
+                    <b>Designed Solution</b>
+                    <p>We built a centralized admin dashboard with real-time order tracking, modeled after the familiar “Excel Bible” layout to ease adoption. Color-coded status tags and priority flags quickly highlight key actions</p>
+                    <ul>
+                        <li>🔴 Edited orders needing supplier updates</li>
+                        <li>🟡 Upcoming deliveries</li>
+                        <li>🟢 New orders</li>
+                    </ul>
+                    <p>We also embedded messaging and notification tools for live coordination and added geofencing filters to surface nearby concrete plants.</p>
+                </div>
+                <div>
+                    <b>Why</b>
+                    <p>The dashboard significantly reduces admin workload, minimizes errors, and improves response time by streamlining workflows and centralizing key data—all while aligning with existing habits and tools.</p>
+                </div>
+
+                <h3>Builder's Mobile App</h3>
+                <section class="gallery stagger-container">
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/Buildermobile.png" alt="" class="img-container" /></div>
+                    <div class="img-gallery stagger-item"><img src="Images/Work/BidCrete/BuilderFlow.png" alt="" class="img-container" /></div>
+                    
+                </section>
+                <div>
+                    <b>Problem</b>
+                    <p>Builders on-site often faced poor communication and delays due to missed updates or last-minute changes. </p>
+                    <p>Without real-time visibility or a direct line to admins, issues couldn’t be reported or resolved quickly, leading to project slowdowns.</p>
+                </div>
+
+                <div>
+                    <b>Designed Solution</b>
+                    <p>We designed a mobile-first app tailored for builders in the field:</p>
+                    <ul>
+                        <li>🌗 High-contrast, touch-friendly UI for outdoor use.</li>
+                        <li>👀 Clear CTA: “Order Concrete” always accessible</li>
+                        <li>🗓️ Calendar view for upcoming deliveries, job site details, and notes</li>
+                        <li>💬 Integrated messaging with admins</li>
+                        <li>🔔 Real-time notifications for updates or changes</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <b>Why</b>
+                    <p>The app empowers builders with <span class="text-highlight"> instant visibility, communication, and control—reducing errors </span>, improving scheduling, and ensuring smoother coordination between field and office.</p>
+                </div>
+
+                <h2>Learnings and Reflections</h2>
+                <p>Designing for BidCrete sharpened my ability to create data-heavy UIs that balance flexibility and usability, especially across admin dashboards and tables. Working with field-driven personas shaped a builder app that truly fits real-world use.</p>
+                <p>As the solo designer, I stayed two sprints ahead of development, refining my annotations for smoother handoffs. </p>
+                <p>This project also highlighted the importance of process documentation—something I plan to prioritize more in future to support scalable design operations.</p>
+                <div class="readnext">
+                    <a href="#navbar"><button class="backtop">Back to top  <span class="material-symbols-outlined">arrow_upward</span></button></a>
+                    <a href="secureRFI.html"><button class="button">Read Next: SecureRFI  <span class="material-symbols-outlined"> arrow_right_alt </span></button></a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+        <img src="Images/Home/Logo - GT.png" alt="GT Logo" />
+        </div>
+        <div class="foot-notes">
+            <i class='bxl  bx-linkedin-square'  style='color:#2867B2'></i>
+            <a href="https://www.linkedin.com/in/gerard-theodore-alcuizar" target="_blank"> Connect with me on LinkedIn </a>
+            <p>© 2025 Made by GT. All rights reserved. </p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
