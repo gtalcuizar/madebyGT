@@ -263,7 +263,7 @@ nav {
   pointer-events: none;
   height: 2.2rem;
   width: auto;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.9;
 }
 
@@ -276,7 +276,7 @@ nav {
 
 .svg-stamp-2 {
   top: 0.3rem;
-  left: -.5rem; /* Left of second line */
+  left: -.1rem; /* Left of second line */
   transform: rotate(-10deg);
   vertical-align: middle;
 }
@@ -576,6 +576,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .backtop {
